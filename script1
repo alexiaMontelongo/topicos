@@ -1,0 +1,10 @@
+const body = document.querySelector('body')
+const colores = ['LigthPink', 'HotPink', 'Khaki', 'Lavender', 'Violet', 'Purple', 'Indigo', 'SpringGreen', 'SkyBlue', 'Navy'];
+
+for(let i = 0 ; i < 10 ; i++){
+    const div = document.createElement('div')
+    div.style.height = '100px'
+    div.style.width = '100px'
+    div.style.backgroundColor = colores[Math.floor(Math.random()*colores.length)]
+    body.appendChild(div) 
+}

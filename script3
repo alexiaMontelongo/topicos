@@ -1,0 +1,22 @@
+const palabras = [
+    "reprehenderit", "ipsum", "dolor", "sit", "amet", "consectetur",
+    "adipiscing", "elit", "sed", "do", "eiusmod", "tempor",
+    "incididunt", "ut", "labore", "et", "dolore", "magna", "aliqua",'lorem'
+];
+
+function textoAleatorio() {
+    let texto = ''
+    let longitud = Math.floor(Math.random() * 51) + 50; 
+    for (let i = 0; i < longitud; i++) {
+        let palabra = palabras[Math.floor(Math.random() * palabras.length)];
+        texto += palabra + ' '
+    }
+    return texto
+}
+
+for (let i = 0; i < 5; i++) {
+    let parrafo = document.createElement('p')
+    let texto = textoAleatorio()
+    parrafo.textContent = texto + ` (${texto.length} caracteres)`
+    document.body.appendChild(parrafo)
+}

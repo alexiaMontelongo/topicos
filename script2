@@ -1,0 +1,18 @@
+let colores = ['LigthPink', 'HotPink', 'Khaki', 'Lavender', 'Violet', 'Purple', 'Indigo', 'SpringGreen', 'SkyBlue', 'Navy', 'Coral', 'Teal', 'Magenta', 'Turquoise', 'Crimson', 'Maroon', 'SlateGray', 'DarkOrange', 'DarkCyan', 'DarkRed'];
+let coloresUnicos = []
+
+while (coloresUnicos.length < 10) {
+    let color = colores[Math.floor(Math.random() * colores.length)]
+    if (!coloresUnicos.includes(color)) {
+        coloresUnicos.push(color)
+    }
+}
+
+for (let i = 0; i < coloresUnicos.length; i++) {
+    let contenedor = document.createElement('div')
+    contenedor.style.width = '100px'
+    contenedor.style.height = '100px'
+    contenedor.style.backgroundColor = coloresUnicos[i]
+    document.body.appendChild(contenedor)
+}
+
